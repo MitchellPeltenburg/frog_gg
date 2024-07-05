@@ -1,6 +1,7 @@
 <head>
     <title> frog gg </title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -14,21 +15,48 @@
         <!-- search box -->
         <input type="text" id="character" name="character" />
 
-        <!-- submit button -->
-        <button type="submit"> submit </button>
     </form>
 
-    <!-- i put the cards in a grid -->
-    <div id="grid-container">
+    <!-- container for character cards -->
+    <div id="character-container">
 
         <!-- each div is a 'card' -->
-        <div class="grid-item"> <input type="image" src="assets/sprigatito-card.png" width="144" height="200"> </div>
-        <div class="grid-item"> <input type="image" src="assets/sprigatito-card.png" width="144" height="200"> </div>
-        <div class="grid-item"> <input type="image" src="assets/sprigatito-card.png" width="144" height="200"> </div>
-        <div class="grid-item"> <input type="image" src="assets/sprigatito-card.png" width="144" height="200"> </div>
-        <div class="grid-item"> <input type="image" src="assets/sprigatito-card.png" width="144" height="200"> </div>
-        <div class="grid-item"> <input type="image" src="assets/sprigatito-card.png" width="144" height="200"> </div>
+        <div class="character-card"> 
+            <button type="button" class="open-button" id="mario"> 
+                <!-- character image -->
+                <img src="assets\sprigatito-card.png" alt="character card image"> 
+            </button> 
+        </div>
+        <div class="character-card"> 
+            <button type="button" class="open-button" id="donkeykong"> 
+                <!-- character image -->
+                <img src="assets\sprigatito-card.png" alt="character card image"> 
+            </button> 
+        </div>
+        <div class="character-card"> 
+            <button type="button" class="open-button" id="link"> 
+                <!-- character image -->
+                <img src="assets\sprigatito-card.png" alt="character card image"> 
+            </button> 
+        </div>
+        <div class="character-card"> 
+            <button type="button" class="open-button" id="samus"> 
+                <!-- character image -->
+                <img src="assets\sprigatito-card.png" alt="character card image"> 
+            </button> 
+        </div>
+
     </div>
     
+    <!-- popup for character details -->
+    <dialog class="modal" id="modal">
+        <div>
+            <div id="character-title"> asdf </div>
+            <img src="assets\sprigatito-card.png" alt="character big image" id="character-bigimage">
+        </div>
+        
+        <!-- close button for popup -->
+        <button type="button" id="close-button"> close </button>
+    </dialog>
 
 </body>

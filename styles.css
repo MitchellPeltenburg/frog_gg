@@ -3,17 +3,45 @@
     text-align: center;
 }
 
-#grid-container {
-    display: grid;
-    column-gap: 10px;
-    row-gap: 10px;
+#character-container {
 
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto;
+    /* formatting for the character cards */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 
-    padding: 10px;
+    background-color: dimgrey;
 }
 
-.grid-item {
+.character-card {
     border: 1px solid black;
+
+    /* size of each character card change accordingly */
+    width: 200px;
+    height: 200px;
+
+    margin: 10px;
+}
+
+.character-card > button {
+    /* set button to fit inside the container (changes based on character-card) */
+    width: 100%;
+    height: 100%;
+}
+
+.character-card > button > img {
+    /* set images to fit inside the button/container (can probably be removed if images are correctly sized) */
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.modal {
+    width: 500px;
+    height: 500px;
+}
+
+#character-bigimage {
+    width: 100%;
+    height: 100%;
 }
